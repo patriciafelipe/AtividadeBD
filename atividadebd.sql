@@ -1,8 +1,3 @@
-use master
-go
-drop database Lojainfo
-go
-
 create database Lojainfo 
 go 
 
@@ -102,3 +97,7 @@ select * from tb_vendas
 go
 select * from tb_vendas_itens
 go
+
+// Faz com que o nome do cliente apareça caso for igual
+select v.id_venda, c.nome, v.id_venda from tb_vendas as v join tb_clientes as c on c.id_cliente = v.id_cliente;
+Go
